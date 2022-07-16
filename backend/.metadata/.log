@@ -909,3 +909,57 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 19:58:25.376
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.BGAquYRj => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:52.937
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:52.938
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@733650f9[org.springframework.tooling.boot.ls:1.29.0.202112031705(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:52.939
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.476
+!MESSAGE Boot LS startup time from start to initialized: 6535ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.665
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hVpvoFInisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.666
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.667
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.667
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.669
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.670
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hVpvoFIn => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.682
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.694
+!MESSAGE buffering callback sts4.classpath.hVpvoFIn catalog false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:13:59.695
+!MESSAGE executing callback sts4.classpath.hVpvoFIn 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:14:00.770
+!MESSAGE executing callback sts4.classpath.hVpvoFIn SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:21:52.079
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hVpvoFIn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:21:52.081
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.hVpvoFIn
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:21:52.082
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:21:52.083
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hVpvoFIn => OK
