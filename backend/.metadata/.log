@@ -963,3 +963,57 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:21:52.083
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hVpvoFIn => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:10.268
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:10.269
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@733650f9[org.springframework.tooling.boot.ls:1.29.0.202112031705(id=564)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:10.270
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-07-16 20:26:12.970
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.438
+!MESSAGE Boot LS startup time from start to initialized: 5166ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.668
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EVsbBFBLisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.669
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.670
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.671
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.671
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.672
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.EVsbBFBL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.686
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.697
+!MESSAGE buffering callback sts4.classpath.EVsbBFBL catalog false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:15.697
+!MESSAGE executing callback sts4.classpath.EVsbBFBL 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-07-16 20:26:16.437
+!MESSAGE executing callback sts4.classpath.EVsbBFBL SUCCESS [done]
