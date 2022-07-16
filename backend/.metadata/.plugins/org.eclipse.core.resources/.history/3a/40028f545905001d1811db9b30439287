@@ -1,0 +1,5 @@
+package io.github.humbertoluiz.catalog.services;
+
+public class CategoryService {
+
+}
