@@ -1,0 +1,5 @@
+package io.github.humbertoluiz.catalog.resources.exception;
+
+public class StandardError {
+
+}
