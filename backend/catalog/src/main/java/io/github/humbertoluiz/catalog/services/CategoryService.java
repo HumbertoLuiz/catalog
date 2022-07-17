@@ -1,17 +1,14 @@
 package io.github.humbertoluiz.catalog.services;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-
 import javax.persistence.EntityNotFoundException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import io.github.humbertoluiz.catalog.dto.CategoryDTO;
 import io.github.humbertoluiz.catalog.entities.Category;
 import io.github.humbertoluiz.catalog.repositories.CategoryRepository;
@@ -25,11 +22,9 @@ public class CategoryService {
 	private CategoryRepository categoryRepository;
 	
 	@Transactional( readOnly = true )
-	public List<CategoryDTO> findAll() {
-		List<Category> list = categoryRepository.findAll();
-		return list.stream()
-				.map(cat -> new CategoryDTO(cat))
-				.collect(Collectors.toList());
+	public Page<CategoryDTO> findAllPaged(PageRequest pageRequest) {
+		Page<Category> list = categoryRepository.findAll(pageRequest);
+		return list.map(cat -> new CategoryDTO(cat));
 	}
 	
 	@Transactional( readOnly = true )
