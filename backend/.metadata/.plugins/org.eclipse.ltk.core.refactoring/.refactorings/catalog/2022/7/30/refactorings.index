@@ -1,1 +1,3 @@
 1658073693544	Rename package 'io.github.humbertoluiz.catalog.resources.exception'
+1658094783166	Rename type 'EntityNotFoundException'
+1658094812622	Rename package 'io.github.humbertoluiz.catalog.services.exception'
