@@ -2,3 +2,4 @@
 1658094783166	Rename type 'EntityNotFoundException'
 1658094812622	Rename package 'io.github.humbertoluiz.catalog.services.exception'
 1658095979552	Copy compilation unit
+1658176105781	Rename resource 'import.sql'
