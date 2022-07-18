@@ -5,6 +5,8 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +28,7 @@ public class Category implements Serializable {
 	private Date created_at;
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "Categories")
+	@ManyToMany(mappedBy = "Categories", cascade = CascadeType.ALL)
 	private Set<Product> products = new HashSet<>();
 	
 	public Category() {}

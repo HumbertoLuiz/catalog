@@ -1,9 +1,7 @@
 package io.github.humbertoluiz.catalog.services;
 
 import java.util.Optional;
-
 import javax.persistence.EntityNotFoundException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -11,8 +9,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
+import io.github.humbertoluiz.catalog.dto.CategoryDTO;
 import io.github.humbertoluiz.catalog.dto.ProductDTO;
+import io.github.humbertoluiz.catalog.entities.Category;
 import io.github.humbertoluiz.catalog.entities.Product;
 import io.github.humbertoluiz.catalog.repositories.CategoryRepository;
 import io.github.humbertoluiz.catalog.repositories.ProductRepository;
@@ -44,7 +43,7 @@ public class ProductService {
 	@Transactional
 	public ProductDTO insert(ProductDTO catDTO) {
 		Product entity = new Product();
-		entity.setName(catDTO.getName());
+		copyDtoToEntity(catDTO, entity);
 		entity = productRepository.save(entity);
 		return new ProductDTO(entity);
 	}
@@ -53,7 +52,7 @@ public class ProductService {
 	public ProductDTO update(ProductDTO catDTO, Long id) {
 		try {
 			Product entity = productRepository.getReferenceById(id);
-			entity.setName(catDTO.getName());
+			copyDtoToEntity(catDTO, entity);
 			entity = productRepository.save(entity);
 			return new ProductDTO(entity);
 		}
@@ -64,7 +63,7 @@ public class ProductService {
 
 	public void delete(Long id) {
 		try {
-		categoryRepository.deleteById(id);
+		productRepository.deleteById(id);
 		}
 		catch (EmptyResultDataAccessException e) {
 			throw new ResourceNotFoundException("Id not found" + id);
@@ -72,5 +71,20 @@ public class ProductService {
 		catch (DataIntegrityViolationException e) {
 			throw new DatabaseException("Integrity Violation");
 		}
-	}		
+	}
+	
+	private void copyDtoToEntity(ProductDTO catDTO, Product entity) {
+		
+		entity.setName(catDTO.getName());
+		entity.setDescription(catDTO.getDescription());
+		entity.setDate(catDTO.getDate());
+		entity.setImgUrl(catDTO.getImgUrl());
+		entity.setPrice(catDTO.getPrice());
+		
+		entity.getCategories().clear();
+		for (CategoryDTO catDTO1 : catDTO.getCategories()) {
+			Category category = categoryRepository.getReferenceById(catDTO1.getId());
+			entity.getCategories().add(category);
+		}
+	}
 }
