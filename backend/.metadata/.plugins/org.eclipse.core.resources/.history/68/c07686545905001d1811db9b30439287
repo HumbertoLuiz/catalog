@@ -1,5 +1,0 @@
-package io.github.humbertoluiz.catalog.repositories;
-
-public class CategoryRepository {
-
-}

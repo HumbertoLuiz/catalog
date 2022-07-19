@@ -1,5 +1,0 @@
-package io.github.humbertoluiz.catalog.services.exception;
-
-public class EntityNotFoundException {
-
-}
